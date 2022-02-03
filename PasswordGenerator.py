@@ -1,10 +1,10 @@
-from lib2to3.pygram import Symbols
 import random
 
+print("Hello, Welcome to Password generator!")
 uppercase_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 lowercase_letters = uppercase_letters.lower()
 digits = "0123456789"
-symbols = "()[]{},;:.-/?|\+*#! "
+symbols = "!@#$%^&*()"
 
 upper, lower, nums, syms = True, True, True, True
 
@@ -19,8 +19,8 @@ if nums:
 if syms:
     all += symbols
 
-length = 20
-amount = 10
+length = int(input("\nEnter the length of password: "))
+amount = int(input("Enter the amount of passwords: "))
 
 for x in range(amount):
     password = "".join(random.sample(all, length))
